@@ -26,7 +26,7 @@ export const useAppState = () => {
 
   // Load settings from localStorage on mount
   useEffect(() => {
-    const savedSettings = localStorage.getItem('pdf-combiner-settings')
+    const savedSettings = localStorage.getItem('private-forge-settings')
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings))
@@ -38,7 +38,7 @@ export const useAppState = () => {
 
   // Save settings to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem('pdf-combiner-settings', JSON.stringify(settings))
+    localStorage.setItem('private-forge-settings', JSON.stringify(settings))
   }, [settings])
 
   const updateSettings = (newSettings: Partial<AppSettings>) => {

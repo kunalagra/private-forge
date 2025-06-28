@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  PDF Combiner
+  Private Forge
   <br>
 </h1>
 
@@ -17,7 +17,7 @@
 
 ## About
 
-The **PDF Combiner** is a powerful and intuitive web-based tool that allows you to effortlessly merge various image formats (JPG, PNG, WebP) and PDF documents into a single, cohesive PDF file. All processing is done locally in your browser, ensuring 100% privacy and security for your files.
+The **Private Forge** is a powerful and intuitive web-based tool that allows you to effortlessly merge various image formats (JPG, PNG, WebP) and PDF documents into a single, cohesive PDF file. All processing is done locally in your browser, ensuring 100% privacy and security for your files.
 
 Mix and match your files in any order, arrange them with simple drag-and-drop functionality, and configure PDF generation options to suit your needs.
 
@@ -36,16 +36,16 @@ Built using Gemini and Lovable!
 
 ## How To Use
 
-To get started with the PDF Combiner locally, follow these steps:
+To get started with the Private Forge locally, follow these steps:
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com) or [pnpm](https://pnpm.io/)).
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/kunalagra/img-pdf-utils
+$ git clone https://github.com/kunalagra/private-forge
 
 # Go into the repository
-$ cd img-pdf-utils
+$ cd private-forge
 
 # Install dependencies (using npm or pnpm)
 $ npm install # or pnpm install
