@@ -22,7 +22,7 @@ export class ImageService {
             return
           }
 
-          let { width, height } = this.calculateDimensions(
+          const { width, height } = this.calculateDimensions(
             img.width,
             img.height,
             paperSize,

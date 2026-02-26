@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
-import { Upload, FileText, Zap, Trash2 } from 'lucide-react'
+import { FileText, Trash2, Upload, Zap } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -14,11 +15,10 @@ import PreviewModal from '../components/PreviewModal'
 import ThemeToggle from '../components/ThemeToggle'
 import { useAppState } from '../hooks/useAppState'
 import {
-  PDFService,
-  type PDFGenerationOptions,
   type FileItem,
+  type PDFGenerationOptions,
+  PDFService,
 } from '../services/pdfService'
-import { toast } from 'sonner'
 
 const Index = () => {
   const { files, setFiles, settings, updateSettings, clearFiles } =

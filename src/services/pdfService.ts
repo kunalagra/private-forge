@@ -56,12 +56,16 @@ export class PDFService {
     for (const fileItem of fileItems) {
       if (fileItem.type === 'image') {
         if (options.useImageCompression) {
-          await this.addCompressedImageToPDF(pdfDoc, fileItem.file, options)
+          await PDFService.addCompressedImageToPDF(
+            pdfDoc,
+            fileItem.file,
+            options,
+          )
         } else {
-          await this.addImageToPDF(pdfDoc, fileItem.file, options)
+          await PDFService.addImageToPDF(pdfDoc, fileItem.file, options)
         }
       } else if (fileItem.type === 'pdf') {
-        await this.addPDFToPDF(pdfDoc, fileItem.file)
+        await PDFService.addPDFToPDF(pdfDoc, fileItem.file)
       }
     }
 
@@ -79,7 +83,7 @@ export class PDFService {
           ? 'Original'
           : options.imagePaperSize
       ]
-    const compressedImageBytes = await this.imageService.processImage(
+    const compressedImageBytes = await PDFService.imageService.processImage(
       imageFile,
       paperSize,
       options.imageQuality,

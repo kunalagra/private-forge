@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import { X, GripVertical, Image as ImageIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { GripVertical, Image as ImageIcon, X } from 'lucide-react'
+import type React from 'react'
+import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import type { FileItem } from '../services/pdfService'
 
 interface ImagePreviewProps {
@@ -48,7 +49,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
     const k = 1024
     const sizes = ['B', 'KB', 'MB']
     const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+    return parseFloat((bytes / k ** i).toFixed(1)) + ' ' + sizes[i]
   }
 
   return (

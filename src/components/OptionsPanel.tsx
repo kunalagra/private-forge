@@ -1,4 +1,5 @@
-import React from 'react'
+import { Image, Maximize, Settings } from 'lucide-react'
+import type React from 'react'
 import {
   Card,
   CardContent,
@@ -6,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import {
   Select,
@@ -14,10 +16,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Switch } from '@/components/ui/switch'
 import { Slider } from '@/components/ui/slider'
-import { Input } from '@/components/ui/input'
-import { Settings, Maximize, Image } from 'lucide-react'
+import { Switch } from '@/components/ui/switch'
 
 export interface OptionsSettings {
   useImageCompression: boolean

@@ -1,11 +1,11 @@
-import React from 'react'
+import { FileText } from 'lucide-react'
+import type React from 'react'
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { FileText } from 'lucide-react'
 import type { FileItem } from '../services/pdfService'
 
 interface PreviewModalProps {

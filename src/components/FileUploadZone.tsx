@@ -1,15 +1,16 @@
-import React, { useCallback, useState } from 'react'
 import {
-  X,
-  ArrowUp,
   ArrowDown,
-  FileText,
-  Image as ImageIcon,
-  GripVertical,
+  ArrowUp,
   Eye,
+  FileText,
+  GripVertical,
+  Image as ImageIcon,
+  X,
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import type React from 'react'
+import { useCallback, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import type { FileItem } from '../services/pdfService'
 
 interface FileUploadZoneProps {
@@ -120,7 +121,7 @@ const FileUploadZone: React.FC<FileUploadZoneProps> = ({
     const k = 1024
     const sizes = ['B', 'KB', 'MB']
     const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+    return parseFloat((bytes / k ** i).toFixed(1)) + ' ' + sizes[i]
   }
 
   const handleFileDragStart = (e: React.DragEvent, index: number) => {
